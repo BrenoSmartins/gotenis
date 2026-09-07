@@ -19,6 +19,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1cf1f011-648f-4b1d-b512-1d30fc135d5a"
+      }
+    },
+    "owner": "brenoviskiwsl",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/1cf1f011-648f-4b1d-b512-1d30fc135d5a"
     }
   }
 }

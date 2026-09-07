@@ -39,6 +39,7 @@ const CATALOGO_BASE = [
     marca: 'Nike',
     precoBase: 399.9,
     tags: 'nike,sneaker,white',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgHA0Yz9Q99CNBJ-tnH2Bi-oLvGhTJdaSwNKPtTOlbqA&s=10',
     lojas: [{ loja: 'Centauro', variacao: 0 }, { loja: 'Nike.com', variacao: 30 }, { loja: 'Netshoes', variacao: 19.1 }],
   },
   {
@@ -47,6 +48,7 @@ const CATALOGO_BASE = [
     marca: 'Adidas',
     precoBase: 259.9,
     tags: 'adidas,sneaker,running',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLuZ57tmxrloD_u6zdUb44jjHp58eu_yQ2bm9o1qIlAA&s=10',
     lojas: [{ loja: 'Netshoes', variacao: 0 }, { loja: 'Adidas.com', variacao: 20 }, { loja: 'Centauro', variacao: 10 }],
   },
   {
@@ -55,6 +57,7 @@ const CATALOGO_BASE = [
     marca: 'Nike',
     precoBase: 289.9,
     tags: 'nike,running,shoe',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjg0DUL8NsuumiKNiA_UPJBT5jQOiBzaxZPm4BaqShg&s=10',
     lojas: [{ loja: 'Centauro', variacao: 0 }, { loja: 'Nike.com', variacao: 25 }, { loja: 'Netshoes', variacao: 12 }],
   },
   {
@@ -63,6 +66,7 @@ const CATALOGO_BASE = [
     marca: 'Nike',
     precoBase: 749.9,
     tags: 'nike,airforce,white,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxSazLzrf14tp9Drw0ffbk60FCAo7Ag-4JWZZkR8gJg&s=10',
     lojas: [{ loja: 'Nike.com', variacao: 0 }, { loja: 'Centauro', variacao: 15 }, { loja: 'Netshoes', variacao: 40 }],
   },
   {
@@ -71,6 +75,7 @@ const CATALOGO_BASE = [
     marca: 'Adidas',
     precoBase: 599.9,
     tags: 'adidas,superstar,shelltoe',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHcuS5fEfMjIHx-pa50iLpAFNJBAR1Gpt0XCDtPmwAnA&s=10',
     lojas: [{ loja: 'Adidas.com', variacao: 0 }, { loja: 'Centauro', variacao: 20 }, { loja: 'Netshoes', variacao: 35 }],
   },
   {
@@ -79,6 +84,7 @@ const CATALOGO_BASE = [
     marca: 'Adidas',
     precoBase: 549.9,
     tags: 'adidas,stansmith,white,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-A1AGX7z_DmIpZbZi-b1uFh3OUj9MO6Ev0aEPdH8_Q&s=10',
     lojas: [{ loja: 'Adidas.com', variacao: 0 }, { loja: 'Netshoes', variacao: 18 }],
   },
   {
@@ -87,6 +93,7 @@ const CATALOGO_BASE = [
     marca: 'Converse',
     precoBase: 279.9,
     tags: 'converse,chucktaylor,canvas',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwmPQFUz5Z5g75mwSDNdn_cHMe-jAOJ1TXhjYxHIRGPQ&s',
     lojas: [{ loja: 'Centauro', variacao: 0 }, { loja: 'Netshoes', variacao: 10 }],
   },
   {
@@ -95,6 +102,7 @@ const CATALOGO_BASE = [
     marca: 'Vans',
     precoBase: 349.9,
     tags: 'vans,oldskool,skate,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu-UmCJYqskCF5yCyhk7Jwp35v3bomMbJkEfa-kOwhew&s',
     lojas: [{ loja: 'Centauro', variacao: 0 }, { loja: 'Netshoes', variacao: 22 }],
   },
   {
@@ -103,6 +111,7 @@ const CATALOGO_BASE = [
     marca: 'New Balance',
     precoBase: 499.9,
     tags: 'newbalance,574,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCY4FRGVqrsTPWe0DTSRJiqMxuax6w4F1cyQRDWVGhZg&s=10',
     lojas: [{ loja: 'Netshoes', variacao: 0 }, { loja: 'Centauro', variacao: 28 }],
   },
   {
@@ -111,6 +120,7 @@ const CATALOGO_BASE = [
     marca: 'Puma',
     precoBase: 329.9,
     tags: 'puma,suede,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY4kaE_x1AOUeV_YZP0JrhOZjKyE3qrmFPjlycWVfkOw&s=10',
     lojas: [{ loja: 'Netshoes', variacao: 0 }, { loja: 'Centauro', variacao: 15 }],
   },
   {
@@ -119,6 +129,7 @@ const CATALOGO_BASE = [
     marca: 'Nike',
     precoBase: 799.9,
     tags: 'nike,airmax90,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn8D_6Oo45n5SJ_DqB6lc70Yw52MWwSZBRG3vpzlC9hg&s',
     lojas: [{ loja: 'Nike.com', variacao: 0 }, { loja: 'Centauro', variacao: 30 }, { loja: 'Netshoes', variacao: 45 }],
   },
   {
@@ -127,6 +138,7 @@ const CATALOGO_BASE = [
     marca: 'Reebok',
     precoBase: 379.9,
     tags: 'reebok,classic,leather,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbXDxejLvnjqnGSx3ZCKay6G3soajMcbS2ClnTT5Xllw&s',
     lojas: [{ loja: 'Centauro', variacao: 0 }, { loja: 'Netshoes', variacao: 12 }],
   },
   {
@@ -135,6 +147,7 @@ const CATALOGO_BASE = [
     marca: 'Adidas',
     precoBase: 459.9,
     tags: 'adidas,gazelle,suede,sneaker',
+    imagemManual: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWQVR-ID8HjDWehkCFsplC2iwq8TbfEjdNX30-IvDlfQ&s=10',
     lojas: [{ loja: 'Adidas.com', variacao: 0 }, { loja: 'Centauro', variacao: 20 }],
   },
 ];
@@ -146,7 +159,9 @@ export const PRODUTOS = CATALOGO_BASE.map((item, index) => {
     nome: item.nome,
     marca: item.marca,
     preco: lojas[0].preco,
-    imagem: fotoTenis(index + 1, item.tags),
+    // Se o produto tiver um "imagemManual" definido lá em cima, ela tem
+    // prioridade. Senão, cai na foto automática do LoremFlickr.
+    imagem: item.imagemManual || fotoTenis(index + 1, item.tags),
     lojas,
     lojaPrincipal: lojas[0],
   };

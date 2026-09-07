@@ -35,6 +35,30 @@
   <Image source={require('../../assets/gotenis-logo.png')} style={{ width: 200, height: 100 }} resizeMode="contain" />
   ```
 
+## Como trocar a foto de um produto
+
+Abra `src/data/produtos.js`, ache o item pelo `nome` e adicione a linha
+`imagemManual` com o link direto da imagem:
+
+```js
+{
+  id: '4',
+  nome: "Nike Air Force 1 '07",
+  marca: 'Nike',
+  precoBase: 749.9,
+  tags: 'nike,airforce,white,sneaker',
+  imagemManual: 'https://exemplo.com/caminho-da-foto.jpg', // <- adicione essa linha
+  lojas: [...],
+},
+```
+
+Pra pegar o "link direto" de uma imagem: clique com o botão direito na foto
+(no Google Imagens, no site da marca, etc) → **Copiar endereço da imagem**
+(não o link da página, o link que termina em `.jpg`, `.png` ou `.webp`).
+
+Se o campo `imagemManual` não existir, o produto continua usando a foto
+automática do LoremFlickr — não precisa mexer nos outros itens.
+
 ## Catálogo, fotos e links de loja (atualizado)
 
 - **13 tênis no catálogo** (`src/data/produtos.js`), cada um com nome, marca,
