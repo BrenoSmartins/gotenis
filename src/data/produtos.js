@@ -159,8 +159,7 @@ export const PRODUTOS = CATALOGO_BASE.map((item, index) => {
     nome: item.nome,
     marca: item.marca,
     preco: lojas[0].preco,
-    // Se o produto tiver um "imagemManual" definido lá em cima, ela tem
-    // prioridade. Senão, cai na foto automática do LoremFlickr.
+    
     imagem: item.imagemManual || fotoTenis(index + 1, item.tags),
     lojas,
     lojaPrincipal: lojas[0],

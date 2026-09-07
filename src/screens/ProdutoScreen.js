@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking, Alert } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../constants/colors';
 import { spacing, typography, radius } from '../constants/theme';
+import { useFavoritos } from '../context/FavoritosContext';
 
-// Abre o site da loja específica pra esse produto.
-// Linking.openURL manda o sistema abrir no navegador (ou no app da loja,
-// se estiver instalado e registrado pra esse link).
+
 async function abrirLoja(url) {
   const suportado = await Linking.canOpenURL(url);
   if (suportado) {
@@ -16,9 +16,9 @@ async function abrirLoja(url) {
 }
 
 export default function ProdutoScreen({ route }) {
-  // O produto inteiro (com fotos e lojas) vem via navigation.navigate('Produto', { produto })
-  // lá na HomeScreen/BuscaScreen. Aqui só usamos o que já veio.
+  
   const produto = route.params?.produto;
+  const { isFavorito, alternarFavorito } = useFavoritos();
 
   if (!produto) {
     return (
@@ -28,9 +28,25 @@ export default function ProdutoScreen({ route }) {
     );
   }
 
+  const favoritado = isFavorito(produto.id);
+
   return (
     <ScrollView style={styles.container}>
-      <Image source={{ uri: produto.imagem }} style={styles.thumb} resizeMode="cover" />
+      <View style={styles.imageWrapper}>
+        <Image source={{ uri: produto.imagem }} style={styles.thumb} resizeMode="cover" />
+        <TouchableOpacity
+          style={styles.favButton}
+          onPress={() => alternarFavorito(produto.id)}
+          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+        >
+          <Ionicons
+            name={favoritado ? 'heart' : 'heart-outline'}
+            size={24}
+            color={favoritado ? colors.primary : colors.text}
+          />
+        </TouchableOpacity>
+      </View>
+
       <Text style={styles.title}>{produto.nome}</Text>
       <Text style={styles.brand}>{produto.marca}</Text>
       <Text style={styles.priceFrom}>A partir de {produto.lojaPrincipal.preco}</Text>
@@ -72,7 +88,26 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: radius.md,
     backgroundColor: colors.surface,
+  },
+  imageWrapper: {
+    position: 'relative',
     marginBottom: spacing.md,
+  },
+  favButton: {
+    position: 'absolute',
+    top: spacing.sm,
+    right: spacing.sm,
+    backgroundColor: colors.white,
+    borderRadius: 20,
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 3,
   },
   title: {
     ...typography.title,

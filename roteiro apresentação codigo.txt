@@ -1,0 +1,24 @@
+Boa, vou te dar isso pronto pra você falar no vídeo, com uma explicação de cada ponto e depois perguntas que o professor pode fazer.
+
+1. Por que navigation.replace() em vez de navigation.navigate() no Login
+
+O que falar:
+"Quando o login dá certo, eu uso navigation.replace('AppTabs') em vez de navigate. A diferença é que o navigate empilha uma nova tela por cima da anterior — ou seja, o Login continuaria existindo na pilha de navegação, e se o usuário apertasse o botão 'voltar' do celular, ele voltaria pra tela de Login já logado, o que não faz sentido. O replace tira o Login da pilha e coloca o app principal no lugar dele, então não tem como voltar pra lá."
+
+Onde mostrar no código: src/screens/LoginScreen.js, dentro da função onSubmit.
+
+2. Como o zod valida os campos
+
+O que falar:
+"Eu uso duas bibliotecas juntas: o react-hook-form, que controla o estado do formulário (o que a pessoa digitou, se o campo já foi tocado, etc), e o zod, que define as regras de validação. O zod funciona como um 'contrato': eu descrevo o formato esperado dos dados — por exemplo, no login, email precisa ser uma string não vazia e no formato de email, e senha precisa ter no mínimo 6 caracteres. Isso fica num objeto chamado loginSchema. Depois, eu conecto esse schema ao formulário usando o zodResolver, que é um adaptador entre as duas bibliotecas. Assim, toda vez que o usuário tenta enviar o formulário, o react-hook-form automaticamente roda essa validação e, se algum campo não bater com a regra, mostra a mensagem de erro embaixo do campo — sem eu precisar escrever esse if manualmente."
+
+Onde mostrar: src/screens/LoginScreen.js (o loginSchema no topo do arquivo) e src/components/InputField.js (onde o erro aparece na tela).
+
+Bônus pra impressionar: no Cadastro (CadastroScreen.js) tem uma validação um pouco mais avançada, o .refine(), que compara dois campos entre si (senha e confirmar senha) — isso é uma regra que não dá pra fazer só olhando um campo por vez.
+
+3. Por que separei AuthStack de AppTabs
+
+O que falar:
+"Eu separei a navegação em dois grupos: o AuthStack, que tem as telas de quem ainda não está logado (Login e Cadastro), e o AppTabs/AppStack, que tem as telas de quem já está logado (Home, Busca, Favoritos, Perfil, e a tela de Produto). Quem decide qual desses dois grupos mostrar é o RootNavigator, lá no topo da árvore de navegação. Isso evita misturar tela logada com tela deslogada dentro da mesma pilha — se eu não separasse, teria que ficar verificando toda hora 'será que esse usuário pode ver essa tela' espalhado pelo código. Assim, a regra fica concentrada num lugar só: uma vez que o login dá certo, a gente troca de bloco inteiro com o replace."
+
+Onde mostrar: src/navigation/RootNavigator.js.
