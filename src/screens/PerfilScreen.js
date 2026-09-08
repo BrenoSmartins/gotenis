@@ -4,9 +4,7 @@ import { colors } from '../constants/colors';
 import { typography, spacing, radius } from '../constants/theme';
 
 export default function PerfilScreen({ navigation }) {
-  // Sair da conta: precisamos voltar até o RootStack (AuthStack/AppTabs).
-  // A partir daqui a árvore é: RootStack > AppStack > Tabs > Perfil,
-  // por isso dois getParent() — um pra sair das Tabs, outro pra sair da AppStack.
+  
   return (
     <View style={styles.container}>
       <View style={styles.avatar} />

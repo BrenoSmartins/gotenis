@@ -4,10 +4,7 @@ import { Controller } from 'react-hook-form';
 import { colors } from '../constants/colors';
 import { spacing, typography, radius } from '../constants/theme';
 
-// Componente de input genérico, ligado ao react-hook-form via Controller.
-// Reaproveitado em Login, Cadastro e qualquer outro formulário do app.
-// Recebe "control" e "name" do formulário pai, e mostra o erro de validação
-// vindo do resolver do zod automaticamente.
+
 
 export default function InputField({
   control,

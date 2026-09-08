@@ -6,9 +6,6 @@ import { colors } from '../constants/colors';
 
 const Stack = createNativeStackNavigator();
 
-// Envolve as bottom tabs numa Stack, só pra poder abrir "Produto" por cima
-// delas — não importa se o usuário clicou no tênis a partir da Home ou da
-// Busca, o destino é sempre essa mesma tela, registrada uma única vez aqui.
 export default function AppStack() {
   return (
     <Stack.Navigator>

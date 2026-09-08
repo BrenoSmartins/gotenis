@@ -16,9 +16,7 @@ const ICONS = {
   Perfil: 'person-outline',
 };
 
-// Bottom tabs — cada uma é uma tela simples. A navegação até "Produto"
-// (que precisa abrir a partir de qualquer aba: Home ou Busca) fica um
-// nível acima, na AppStack, pra não precisar duplicar a rota em cada aba.
+
 export default function AppTabs() {
   return (
     <Tab.Navigator

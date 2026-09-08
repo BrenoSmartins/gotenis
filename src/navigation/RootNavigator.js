@@ -6,11 +6,7 @@ import AppStack from './AppStack';
 
 const RootStack = createNativeStackNavigator();
 
-// Navegador raiz: começa no fluxo de autenticação.
-// LoginScreen/CadastroScreen usam navigation.replace('AppTabs') pra entrar
-// no app principal sem deixar o Login na pilha (usuário não volta pra ele
-// apertando "voltar"). O nome da rota continua "AppTabs" por conveniência,
-// mesmo o componente agora sendo a AppStack (Tabs + Produto).
+
 export default function RootNavigator() {
   return (
     <NavigationContainer>

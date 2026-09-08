@@ -7,8 +7,6 @@ import InputField from '../components/InputField';
 import { colors } from '../constants/colors';
 import { spacing, typography, radius } from '../constants/theme';
 
-// Segundo exemplo de formulário validado, com uma regra a mais:
-// confirmar que "senha" e "confirmarSenha" são iguais (refine).
 const cadastroSchema = z
   .object({
     nome: z.string().min(2, 'Digite seu nome completo'),

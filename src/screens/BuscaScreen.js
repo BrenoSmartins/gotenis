@@ -4,7 +4,6 @@ import { colors } from '../constants/colors';
 import { spacing, typography, radius } from '../constants/theme';
 import { PRODUTOS } from '../data/produtos';
 
-// Marcas presentes no catálogo — usadas como chips de filtro rápido.
 const MARCAS = [...new Set(PRODUTOS.map((p) => p.marca))];
 
 export default function BuscaScreen({ navigation }) {

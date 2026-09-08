@@ -9,7 +9,7 @@ export function FavoritosProvider({ children }) {
   const [favoritosIds, setFavoritosIds] = useState([]);
   const [carregado, setCarregado] = useState(false);
 
-  // Ao abrir o app, carrega os favoritos salvos no aparelho.
+
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY)
       .then((salvo) => {
@@ -19,7 +19,7 @@ export function FavoritosProvider({ children }) {
       .finally(() => setCarregado(true));
   }, []);
 
-  // Toda vez que a lista muda, salva de novo no aparelho.
+
   useEffect(() => {
     if (!carregado) return; // evita sobrescrever com [] antes de terminar de carregar
     AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(favoritosIds)).catch((err) =>
@@ -44,8 +44,7 @@ export function FavoritosProvider({ children }) {
   );
 }
 
-// Hook customizado — em vez de toda tela importar useContext + FavoritosContext,
-// ela só chama useFavoritos() e já recebe tudo pronto.
+
 export function useFavoritos() {
   const context = useContext(FavoritosContext);
   if (!context) {

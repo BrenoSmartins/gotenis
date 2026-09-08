@@ -1,13 +1,4 @@
 // Catálogo mockado do GoTênis.
-// Não existe uma API pública unificada das lojas (Centauro, Netshoes, Nike),
-// então os dados aqui são estáticos — o de praxe para um protótipo de UI.
-//
-// As fotos vêm do LoremFlickr (serviço público que retorna fotos reais do
-// Flickr por palavra-chave). Não são fotos oficiais de cada loja, mas
-// servem bem pra representar visualmente o catálogo no protótipo.
-//
-// Os links de loja apontam pra busca de cada loja já com o nome do tênis,
-// ou seja, ao clicar o usuário cai numa página real com aquele modelo.
 
 function fotoTenis(seed, tags) {
   return `https://loremflickr.com/480/360/${tags}?lock=${seed}`;

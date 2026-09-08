@@ -7,8 +7,6 @@ import InputField from '../components/InputField';
 import { colors } from '../constants/colors';
 import { spacing, typography, radius } from '../constants/theme';
 
-// Schema de validação do formulário de login.
-// zod descreve as regras, e o zodResolver conecta isso ao react-hook-form.
 const loginSchema = z.object({
   email: z
     .string()
@@ -30,11 +28,10 @@ export default function LoginScreen({ navigation }) {
     defaultValues: { email: '', senha: '' },
   });
 
-  // No protótipo não existe backend real de autenticação.
-  // Aqui simulamos a validação e, se passar, navegamos pro app principal.
+
   const onSubmit = async (data) => {
     console.log('Login validado:', data);
-    // Simula uma chamada de API
+
     await new Promise((resolve) => setTimeout(resolve, 600));
     navigation.replace('AppTabs');
   };

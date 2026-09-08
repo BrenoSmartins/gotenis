@@ -1,5 +1,3 @@
-// Valores reutilizáveis de espaçamento e tipografia.
-// Evita ficar repetindo números "chutados" em cada StyleSheet.
 
 export const spacing = {
   xs: 4,
